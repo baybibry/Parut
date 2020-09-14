@@ -8,7 +8,7 @@ const Login = (props) => {
         <div className='con-flex '>
             <div className="arow">
                 <div className="col text-light col-al">
-                    <h1>Parut Play</h1>
+                    <h1>Parut Plays</h1>
                     <p>Make and organize playlist on your spotify account.</p>
                     {/* <a href="https://accounts.spotify.com/authorize?client_id=bea853eeaba941aba1a886538c9008a6&response_type=code&redirect_uri=%0Ahttps%3A%2F%2Fparut.netlify.com"> */}
                     {/* &scope=user-read-private%20user-read-email&state=34fFs29kd09" */}
