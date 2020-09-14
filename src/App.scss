@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    user-select: none;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(54, 54, 54);
+    border-radius: 50px;
+}
+
+.back-color{
+    background: #0090ff;
+}
+
+.con-flex{
+    height: 100vh;
+
+    .arow{
+        display: flex;
+        flex-flow: wrap;
+        flex-direction: row;
+        align-content: center;
+
+        .col{
+            display: flex;
+            flex-direction: column;
+            flex-basis: 450px;
+            justify-content: center;
+            align-items: center;
+
+            
+            img{
+                width: 40vw;
+            }   
+
+            .img-center{
+                align-self: center;
+                justify-self: center;
+            }
+
+        }
+
+        .col-al{
+            text-align: center;
+            margin:  auto;
+            background: #0090ff;
+            height: 100vh;
+            line-height: 3em;
+        }
+
+        .col-img{
+            display: flex;
+        }
+    }
+}
+
+.img-prof{
+    cursor: pointer;
+}
+
+.grid-music{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
+    grid-gap: 1em;
+    padding: 1em ;
+    font-size: 1.4em;
+}
+
+.color{
+    height: 10vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(58, 58, 58);
+}
+
+.bg-parut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .8em 0;
+
+    section{
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        margin: 0 1em;
+        padding: .1em .7em;
+        transition: ease 500ms background;
+        color: rgb(27, 27, 27);
+
+        h5{
+            font-size: 1em;
+        }
+    }
+}
+
+.box-music{
+    padding: .4em;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+
+    .over-list{
+        flex-basis: 60%;
+        height: 75vh;
+        overflow: auto;
+    }
+
+    .music-player{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        flex-basis: 40%;
+        padding: .4em;
+
+        button{
+            width: 10%;
+            background: transparent;
+            border: none;
+            align-self: center;
+
+            &:focus, &:active{
+                outline: none;
+            }
+        }
+
+        .img-cover{
+            opacity: .5;
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .round-circle{
+            border-radius: 100%;
+        }
+
+        img{
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.Music{
+
+    ul{
+        padding: .5em;
+        height: auto;
+
+        .MusicList{
+            display: flex;
+            flex-direction: row;
+            padding: .5em;
+            margin: .25em 0;
+            background: #363636;
+            position: relative;
+            color: #ffff;
+            cursor: pointer;
+
+            .FaBookmark{
+                color: rgb(60, 226, 255);
+                margin: 0 .5em;
+                transition: .5s ease;
+                font-size: 0rem;
+                &:hover{
+                    transform: scale(1.5);
+                    transform: rotate(90deg);
+                }
+            }
+
+            .FaPlayCircle{
+                color: #0090ff;
+                margin: 0 .5em;
+                transition: .5s ease;
+                font-size: 0rem;
+
+                &:hover{
+                    transform: scale(1.5);
+                }
+            }
+
+            .btns{
+                display: flex;
+                height: 75%;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                right: 0;
+            }
+
+            &:hover{
+                background: #303030;
+
+                .FaBookmark, .FaPlayCircle{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    
+}
+
+.Lyrics{
+    text-align: center;
+    line-height: 2em;
+    padding: 1em;
+    color: #ffff;
+    background: rgb(31, 31, 31);
+    height: 100%;
+    overflow: auto;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.welcome{
+    background: #363636;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: bgcolor;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+    @keyframes bgcolor {
+        0%{
+            background: #363636;
+        }
+        25%{
+            background: #1c1c1c;
+        }
+        50%{
+            background: #363636;
+        }
+        75%{
+            background: #1c1c1c;
+        }
+        100%{
+            background: #363636;
+        }
+    }
+
+    h2{
+        margin: auto;
+        color: #0090ff;
+    }
+
+}
+
+.modalAdd{
+    background: #363636;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    
+    .FaPlusCircle{
+        color: #0090ff;
+        transition: all ease 1s;
+        transform: scale(2);   
+    }
+
+    &:hover{
+        .FaPlusCircle{
+            transform: scale(1);   
+        }
+    }
+}
+
+.cursor{
+    cursor: pointer;
+    
+    &:hover{
+        background: #0090ff;
+    }
+}
+
+.fof{
+    display: grid;
+    place-items: center;
+    font-family: 'Permanent Marker', cursive;
+    width: 100%;
+    height: 100vh;
+    background: #0090ff;
+
+    h1{
+        margin: auto;
+        font-size: 7em;
+        color: #363636;
+        span{
+            color: #ffffff;
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    .col-al{
+        max-height: 60vh;
+    }
+
+    .FaBookmark, .FaPlayCircle{
+        font-size: 2em;
+    }
+
+    .col-img{
+        height: 40vh;
+        margin: auto;
+
+        img{
+            max-width: 40vh;
+        }
+    }
+
+    .box-music{
+        padding: 1em;
+    
+        .over-list{
+            flex-basis: 100%;
+        }
+    
+        .music-player{
+            flex-basis: 100%;
+        }
+    }
+
+    .Lyrics{
+        padding: 0;
+    }
+
+    .fof{
+        h1{
+            font-size: 2em;
+        }
+    }
+
+    .welcome{
+    
+        h2{
+            font-size: 1.5em;
+        }   
+
+    }
+
+    .modalAdd{
+        
+        .FaPlusCircle{
+            font-size: .5em;
+        }
+    }
+}
